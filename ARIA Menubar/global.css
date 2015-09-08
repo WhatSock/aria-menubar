@@ -1,0 +1,143 @@
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+.clearfix {
+display: inline-block;
+}
+* html .clearfix {
+height: 1%;
+}
+.clearfix {
+display: block;
+}
+
+body {
+text-align: center;
+font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 0.93em;
+background-color: #f5f5f5;
+color: #000;
+}
+
+a:link, a:visited, a:active, a:hover {
+color: #0000b0;
+}
+
+*:focus {
+outline: dashed 2px blue;
+}
+
+.hidden {
+display: none;
+visibility: hidden;
+}
+
+div.pageContainer {
+max-width: 1100px;
+margin-left: auto;
+margin-right: auto;
+}
+
+div.headerBlock1 > div {
+text-align: left;
+float: left;
+}
+
+div.headerBlock1 div.searchBlock, div.headerBlock2 div.menubarWrapper {
+float: right;
+}
+
+/*
+The following CSS rules include attribute role values in order to convey which elements require specific role assignments within the markup.
+*/
+
+div.menubarWrapper[role="application"] {
+font-family: Tahoma, Geneva, sans-serif;
+font-weight: bold;
+font-size: 16px;
+text-align: center;
+padding: 5px 8px;
+}
+
+div.menubarWrapper[role="application"] ul[role="menubar"], div.menubarWrapper[role="application"] ul[role="menu"] {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+div.menubarWrapper[role="application"] ul[role="menu"] {
+position: absolute;
+margin-top: 30px;
+margin-left: 10px;
+font-size: 13px;
+text-align: left;
+padding: 5px;
+border: 1px solid #dedede;
+background: #bdbdbd;
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#cacaca', endColorstr='#aeaeae'); /*  IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#cacaca), to(#aeaeae)); /*  WebKit */
+background: -moz-linear-gradient(top,  #cacaca, #aeaeae);
+border-color: #000;
+color: #000;
+text-shadow: 0 1px 0 #d4d4d4;
+-webkit-box-shadow: 0 1px 1px #c9c9c9, inset 0 1px 0 #d7d7d7;
+-moz-box-shadow: 0 1px 1px #c9c9c9, inset 0 1px 0 #d7d7d7;
+box-shadow: 0 1px 1px #c9c9c9, inset 0 1px 0 #d7d7d7;
+border-radius: 4px;
+}
+
+div.menubarWrapper[role="application"] ul.nested-submenu[role="menu"] {
+margin-top: -4px;
+margin-left: 120px;
+}
+
+div.menubarWrapper[role="application"] ul[role="menubar"] > li[role="presentation"] {
+float: left;
+width: 150px;
+}
+
+div.menubarWrapper[role="application"] ul[role="menu"] > li[role="presentation"] {
+clear: both;
+margin: 3px 0px 3px 0px;
+}
+
+div.menubarWrapper[role="application"] a[href][role="menuitem"] {
+float: left;
+width: 100px;
+text-decoration: none;
+padding: 5px 8px;
+border: 1px solid #dedede;
+background: #92dbf6;
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#abe4f8', endColorstr='#6fcef3'); /*  IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#abe4f8), to(#6fcef3)); /*  WebKit */
+background: -moz-linear-gradient(top,  #abe4f8, #6fcef3);
+border-color: #000;
+color: #000;
+text-shadow: 0 1px 0 #b6e6f9;
+-webkit-box-shadow: 0 1px 1px #d6d6d6, inset 0 1px 0 #c0ebfa;
+-moz-box-shadow: 0 1px 1px #d6d6d6, inset 0 1px 0 #c0ebfa;
+box-shadow: 0 1px 1px #d6d6d6, inset 0 1px 0 #c0ebfa;
+}
+
+div.menubarWrapper[role="application"] a[href][role="menuitem"]:hover {
+background: #9cedef;
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#b7f2f4', endColorstr='#7ce7ea'); /*  IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#b7f2f4), to(#7ce7ea)); /*  WebKit */
+background: -moz-linear-gradient(top,  #b7f2f4, #7ce7ea);
+border-color: #90c6c8 #78bdc0 #65b6ba;
+color: #006400;
+text-shadow: 0 1px 0 #bef3f5;
+-webkit-box-shadow: 0 1px 1px #d5d5d5, inset 0 1px 0 #c9f5f7;
+-moz-box-shadow: 0 1px 1px #d5d5d5, inset 0 1px 0 #c9f5f7;
+box-shadow: 0 1px 1px #d5d5d5, inset 0 1px 0 #c9f5f7;
+}
+
+div.menubarWrapper[role="application"] a[href][role="menuitem"] span.menuIcon:before {
+content: ' \25BC';
+}
