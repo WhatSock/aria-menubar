@@ -1,31 +1,31 @@
 <html>
 				<head>
-								<link rel = "stylesheet" type = "text/css" href = "global.css">
-								<script type = "text/javascript" src = "jQuery.js">
+								<link rel="stylesheet" type="text/css" href="global.css">
+								<script type="text/javascript" src="jQuery.js">
 								</script>
 
-								<script type = "text/javascript" src = "setup.js">
+								<script type="text/javascript" src="setup.js">
 								</script>
 				</head>
 
 				<body>
-								<div class = "pageContainer">
-												<div role = "banner" aria-label = "top">
-																<div class = "headerBlock1 clearfix">
-																				<div class = "logoLnk">
-																								<a href = "#" onclick = "return false"> Standard link for logo </a>
+								<div class="pageContainer">
+												<div role="banner" aria-label="top">
+																<div class="headerBlock1 clearfix">
+																				<div class="logoLnk">
+																								<a href="#" onclick="return false"> Standard link for logo </a>
 																				</div>
 
-																				<div class = "searchBlock">
-																								<label for = "searchInput"> Search</label>
+																				<div class="searchBlock">
+																								<label for="searchInput"> Search</label>
 
-																								<input type = "text" id = "searchInput" />
+																								<input type="text" id="searchInput" />
 
 																								<button> Search </button>
 																				</div>
 																</div>
 
-																<div class = "headerBlock2 clearfix">
+																<div class="headerBlock2 clearfix">
 
 <!-- IMPORTANT
 
@@ -36,7 +36,7 @@ There must be no embedded active elements within the role="application" containe
 (View the setup.js file for implementation specifics.)
 -->
 
-																				<div class = "menubarWrapper" role = "application" aria-label = "MenuBar">
+																				<div class="menubarWrapper" role="application" aria-label="MenuBar">
 
 <!-- IMPORTANT
 
@@ -45,14 +45,14 @@ The UL tag for the top level Menubar must include role="menubar", and include a 
 The 'horizontal' or 'vertical' classes may be used to configure the correct keyboard functionality so that it matches the visual layout of the Menubar.
 -->
 
-																								<ul id = "unique-menubar-id" class = "horizontal menubar clearfix" role = "menubar">
+																								<ul id="unique-menubar-id" class="horizontal menubar clearfix" role="menubar">
 
 <!-- IMPORTANT
 
 All LI tags within the Menubar and Menu constructs must include role="presentation" to allow for automatic X of Y positioning information to be calculated.
 -->
 
-																												<li role = "presentation">
+																												<li role="presentation">
 
 <!-- IMPORTANT
 
@@ -65,9 +65,9 @@ When a top level role="menuitem" A tag includes the class 'navigates-away', dual
 Additional inline HTML elements such as Spans may be added to any A tag that includes role="menuitem" in order to customize visual styling.
 -->
 
-																												<a data-submenu-id = "google-submenu-id" href = "http://google.com/"
-																													class = "menubar-link navigates-away opens-submenu" role = "menuitem">
-																												<span> Google </span> <span class = "menuIcon"></span> </a>
+																												<a data-submenu-id="google-submenu-id" href="http://google.com/"
+																													class="menubar-link navigates-away opens-submenu" role="menuitem">
+																												<span> Google </span> <span class="menuIcon"></span> </a>
 
 <!-- IMPORTANT
 
@@ -80,79 +80,79 @@ The 'hidden' class must include display:none as part of it's property set within
 (Change the hiddenClass variable to update this within setup.js if needed)
 -->
 
-																												<ul id = "google-submenu-id" class = "vertical menu hidden" role = "menu">
-																																<li role = "presentation">
+																												<ul id="google-submenu-id" class="vertical menu hidden" role="menu">
+																																<li role="presentation">
 
 <!-- IMPORTANT
 
 If an A tag that includes role="menuitem" opens a nested submenu from within a UL that includes role="menu", the A tag must also include the attribute href="#". (Do not include a JavaScript void() statement within the href attribute.)
 -->
 
-																																<a data-submenu-id = "google-news-submenu-id" href = "#"
-																																	class = "menu-link opens-submenu" role = "menuitem">
-																																<span>Google News</span> <span class = "menuIcon"></span> </a>
+																																<a data-submenu-id="google-news-submenu-id" href="#"
+																																	class="menu-link opens-submenu" role="menuitem">
+																																<span>Google News</span> <span class="menuIcon"></span> </a>
 
-																																<ul id = "google-news-submenu-id" class = "vertical nested-submenu hidden"
-																																	role = "menu">
-																																				<li role = "presentation">
-																																				<a href = "http://news.google.com/?edchanged=1&ned=us" class = "menu-link"
-																																					role = "menuitem"> <span>US News</span> </a> </li>
+																																<ul id="google-news-submenu-id" class="vertical nested-submenu hidden"
+																																	role="menu">
+																																				<li role="presentation">
+																																				<a href="http://news.google.com/?edchanged=1&ned=us" class="menu-link"
+																																					role="menuitem"> <span>US News</span> </a> </li>
 
-																																				<li role = "presentation">
-																																				<a href = "http://news.google.com/?edchanged=1&ned=au" class = "menu-link"
-																																					role = "menuitem"> <span>Au News</span> </a> </li>
+																																				<li role="presentation">
+																																				<a href="http://news.google.com/?edchanged=1&ned=au" class="menu-link"
+																																					role="menuitem"> <span>Au News</span> </a> </li>
 
-																																				<li role = "presentation">
-																																				<a href = "http://news.google.com/?edchanged=1&ned=uk" class = "menu-link"
-																																					role = "menuitem"> <span>UK News</span> </a> </li>
+																																				<li role="presentation">
+																																				<a href="http://news.google.com/?edchanged=1&ned=uk" class="menu-link"
+																																					role="menuitem"> <span>UK News</span> </a> </li>
 																																</ul>
 
 																																</li>
 
-																																<li role = "presentation">
-																																<a href = "http://gmail.google.com/" class = "menu-link" role = "menuitem">
+																																<li role="presentation">
+																																<a href="http://gmail.google.com/" class="menu-link" role="menuitem">
 																																<span>Google Mail</span> </a> </li>
 
-																																<li role = "presentation">
-																																<a href = "http://groups.google.com/" class = "menu-link" role = "menuitem">
+																																<li role="presentation">
+																																<a href="http://groups.google.com/" class="menu-link" role="menuitem">
 																																<span>Google Groups</span> </a> </li>
 																												</ul>
 
 																												</li>
 
-																												<li role = "presentation">
-																												<a data-submenu-id = "discovery-submenu-id" href = "http://news.discovery.com/"
-																													class = "menubar-link navigates-away opens-submenu" role = "menuitem">
-																												<span>Discovery</span> <span class = "menuIcon"></span> </a>
+																												<li role="presentation">
+																												<a data-submenu-id="discovery-submenu-id" href="http://news.discovery.com/"
+																													class="menubar-link navigates-away opens-submenu" role="menuitem">
+																												<span>Discovery</span> <span class="menuIcon"></span> </a>
 
-																												<ul id = "discovery-submenu-id" class = "vertical menu hidden" role = "menu">
-																																<li role = "presentation">
-																																<a href = "http://news.discovery.com/tech" class = "menu-link" role = "menuitem">
+																												<ul id="discovery-submenu-id" class="vertical menu hidden" role="menu">
+																																<li role="presentation">
+																																<a href="http://news.discovery.com/tech" class="menu-link" role="menuitem">
 																																<span>Tech News</span> </a> </li>
 
-																																<li role = "presentation">
-																																<a href = "http://news.discovery.com/space" class = "menu-link" role = "menuitem">
+																																<li role="presentation">
+																																<a href="http://news.discovery.com/space" class="menu-link" role="menuitem">
 																																<span>Space News</span> </a> </li>
 																												</ul>
 
 																												</li>
 
-																												<li role = "presentation">
-																												<a data-submenu-id = "cbs-submenu-id" href = "http://news.cbs.com/"
-																													class = "menubar-link navigates-away opens-submenu" role = "menuitem">
-																												<span>CBS</span> <span class = "menuIcon"></span> </a>
+																												<li role="presentation">
+																												<a data-submenu-id="cbs-submenu-id" href="http://news.cbs.com/"
+																													class="menubar-link navigates-away opens-submenu" role="menuitem">
+																												<span>CBS</span> <span class="menuIcon"></span> </a>
 
-																												<ul id = "cbs-submenu-id" class = "vertical menu hidden" role = "menu">
-																																<li role = "presentation">
-																																<a href = "http://www.cbsnews.com/us/" class = "menu-link" role = "menuitem">
+																												<ul id="cbs-submenu-id" class="vertical menu hidden" role="menu">
+																																<li role="presentation">
+																																<a href="http://www.cbsnews.com/us/" class="menu-link" role="menuitem">
 																																<span>US News</span> </a> </li>
 
-																																<li role = "presentation">
-																																<a href = "http://www.cbsnews.com/world/" class = "menu-link" role = "menuitem">
+																																<li role="presentation">
+																																<a href="http://www.cbsnews.com/world/" class="menu-link" role="menuitem">
 																																<span>World News</span> </a> </li>
 
-																																<li role = "presentation">
-																																<a href = "http://www.cbsnews.com/politics/" class = "menu-link" role = "menuitem">
+																																<li role="presentation">
+																																<a href="http://www.cbsnews.com/politics/" class="menu-link" role="menuitem">
 																																<span>Political News</span> </a> </li>
 																												</ul>
 
@@ -162,7 +162,7 @@ If an A tag that includes role="menuitem" opens a nested submenu from within a U
 																</div>
 												</div>
 
-												<div role = "main">
+												<div role="main">
 																<p>
 																Page body content.
 </p>
