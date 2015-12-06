@@ -1,175 +1,220 @@
 <html>
-				<head>
-								<link rel="stylesheet" type="text/css" href="css/global.css">
-								<script type="text/javascript" src="js/jQuery.js">
-								</script>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/aria_menubar_module.min.js"></script>
 
-								<script type="text/javascript" src="js/aria_menubar_module.min.js">
-								</script>
+    <script type="text/javascript" src="js/setup.js"></script>
+  </head>
 
-								<script type="text/javascript" src="js/setup.js">
-								</script>
-				</head>
+  <body>
+    <div class="pageContainer">
+      <div role="banner" aria-label="top">
+        <div class="headerBlock1 clearfix">
+          <div class="logoLnk">
+            <a href="#" onclick="return false"> Standard link for logo </a>
+          </div>
 
-				<body>
-								<div class="pageContainer">
-												<div role="banner" aria-label="top">
-																<div class="headerBlock1 clearfix">
-																				<div class="logoLnk">
-																								<a href="#" onclick="return false"> Standard link for logo </a>
-																				</div>
+          <div class="searchBlock">
+            <label for="searchInput"> Search</label>
 
-																				<div class="searchBlock">
-																								<label for="searchInput"> Search</label>
+            <input type="text" id="searchInput" />
 
-																								<input type="text" id="searchInput" />
+            <button> Search </button>
+          </div>
+        </div>
 
-																								<button> Search </button>
-																				</div>
-																</div>
+        <div class="headerBlock2 clearfix">
 
-																<div class="headerBlock2 clearfix">
+    <!-- IMPORTANT
 
-<!-- IMPORTANT
+    The role="application" attribute on the surrounding Div is critical and
+    must be present as a wrapper for all role="menubar" constructs. The
+    aria-label attribute is presented to non-sighted screen reader users who
+    can then quickly navigate to this landmark.
 
-The role="application" attribute on the surrounding Div is critical and must be present as a wrapper for all role="menubar" constructs. The aria-label attribute is presented to non-sighted screen reader users who can then quickly navigate to this landmark.
+    There must be no embedded active elements within the role="application"
+    container that don't consist of A tags that include role="menuitem".
 
-There must be no embedded active elements within the role="application" container that don't consist of A tags that include role="menuitem".
+    (View the setup.js file for implementation specifics.)
+    -->
 
-(View the setup.js file for implementation specifics.)
--->
+          <div class="menubarWrapper" role="application" aria-label="MenuBar">
 
-																				<div class="menubarWrapper" role="application" aria-label="MenuBar">
+    <!-- IMPORTANT
 
-<!-- IMPORTANT
+    The UL tag for the top level Menubar must include role="menubar", and
+    include a unique ID.
 
-The UL tag for the top level Menubar must include role="menubar", and include a unique ID.
+    The 'horizontal' or 'vertical' classes may be used to configure the
+    correct keyboard functionality so that it matches the visual layout of
+    the Menubar.
+    -->
 
-The 'horizontal' or 'vertical' classes may be used to configure the correct keyboard functionality so that it matches the visual layout of the Menubar.
--->
+            <ul id="unique-menubar-id" class="horizontal menubar clearfix" role="menubar">
 
-																								<ul id="unique-menubar-id" class="horizontal menubar clearfix" role="menubar">
+    <!-- IMPORTANT
 
-<!-- IMPORTANT
+    All LI tags within the Menubar and Menu constructs must include
+    role="presentation" to allow for automatic X of Y positioning
+    information to be calculated.
+    -->
 
-All LI tags within the Menubar and Menu constructs must include role="presentation" to allow for automatic X of Y positioning information to be calculated.
--->
+              <li role="presentation">
 
-																												<li role="presentation">
+    <!-- IMPORTANT
 
-<!-- IMPORTANT
+    All A tags must include role="menuitem", and exist as firstChild node
+    elements of LI.
 
-All A tags must include role="menuitem", and exist as firstChild node elements of LI.
+    When an A tag that includes role="menuitem" opens a submenu, it must
+    include a data-submenu-id attribute that points to the ID of the
+    referenced Menu structure (consisting of a UL tag that includes
+    role="menu").
 
-When an A tag that includes role="menuitem" opens a submenu, it must include a data-submenu-id attribute that points to the ID of the referenced Menu structure (consisting of a UL tag that includes role="menu").
+    When a top level role="menuitem" A tag includes the class
+    'navigates-away', dual 'click' and 'mouseover' functionality will
+    automatically be applied to allow for the link to navigate to another
+    page when clicked, or to open a submenu when moused over.
 
-When a top level role="menuitem" A tag includes the class 'navigates-away', dual 'click' and 'mouseover' functionality will automatically be applied to allow for the link to navigate to another page when clicked, or to open a submenu when moused over.
+    Additional inline HTML elements such as Spans may be added to any A tag
+    that includes role="menuitem" in order to customize visual styling.
+    -->
 
-Additional inline HTML elements such as Spans may be added to any A tag that includes role="menuitem" in order to customize visual styling.
--->
+                <a data-submenu-id="google-submenu-id" href="http://google.com/"
+                  class="menubar-link navigates-away opens-submenu" role="menuitem">
+                  <span> Google </span> <span class="menuIcon"></span>
+                </a>
 
-																												<a data-submenu-id="google-submenu-id" href="http://google.com/"
-																													class="menubar-link navigates-away opens-submenu" role="menuitem">
-																												<span> Google </span> <span class="menuIcon"></span> </a>
+    <!-- IMPORTANT
 
-<!-- IMPORTANT
+    The UL tag for all nested Menu structures must include role="menu", and
+    include a unique ID that is referenced by the controlling A tag via its
+    data-submenu-id attribute.
 
-The UL tag for all nested Menu structures must include role="menu", and include a unique ID that is referenced by the controlling A tag via its data-submenu-id attribute.
+    The 'horizontal' or 'vertical' classes may be used to configure the correct
+    keyboard functionality so that it matches the visual layout of the Menu.
 
-The 'horizontal' or 'vertical' classes may be used to configure the correct keyboard functionality so that it matches the visual layout of the Menu.
+    The 'hidden' class must include display:none as part of it's property set
+    within the CSS stylesheet. If changed, this must also be changed within the
+    setup.js file to reference the correct class name for toggling.
 
-The 'hidden' class must include display:none as part of it's property set within the CSS stylesheet. If changed, this must also be changed within the setup.js file to reference the correct class name for toggling.
+    (Change the hiddenClass variable to update this within setup.js if needed)
+    -->
 
-(Change the hiddenClass variable to update this within setup.js if needed)
--->
+                <ul id="google-submenu-id" class="vertical menu hidden" role="menu">
+                  <li role="presentation">
 
-																												<ul id="google-submenu-id" class="vertical menu hidden" role="menu">
-																																<li role="presentation">
+    <!-- IMPORTANT
 
-<!-- IMPORTANT
+    If an A tag that includes role="menuitem" opens a nested submenu from
+    within a UL that includes role="menu", the A tag must also include the
+    attribute href="#". (Do not include a JavaScript void() statement within
+    the href attribute.)
+    -->
 
-If an A tag that includes role="menuitem" opens a nested submenu from within a UL that includes role="menu", the A tag must also include the attribute href="#". (Do not include a JavaScript void() statement within the href attribute.)
--->
+                    <a data-submenu-id="google-news-submenu-id" href="#"
+                      class="menu-link opens-submenu" role="menuitem">
+                      <span>Google News</span> <span class="menuIcon right"></span>
+                    </a>
 
-																																<a data-submenu-id="google-news-submenu-id" href="#"
-																																	class="menu-link opens-submenu" role="menuitem">
-																																<span>Google News</span> <span class="menuIcon right"></span> </a>
+                    <ul id="google-news-submenu-id" class="vertical nested-submenu hidden"
+                      role="menu">
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=us" class="menu-link"
+                          role="menuitem"> <span>US News</span>
+                        </a>
+                      </li>
 
-																																<ul id="google-news-submenu-id" class="vertical nested-submenu hidden"
-																																	role="menu">
-																																				<li role="presentation">
-																																				<a href="http://news.google.com/?edchanged=1&ned=us" class="menu-link"
-																																					role="menuitem"> <span>US News</span> </a> </li>
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=au" class="menu-link"
+                          role="menuitem"> <span>Au News</span>
+                        </a>
+                      </li>
 
-																																				<li role="presentation">
-																																				<a href="http://news.google.com/?edchanged=1&ned=au" class="menu-link"
-																																					role="menuitem"> <span>Au News</span> </a> </li>
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=uk" class="menu-link"
+                          role="menuitem"> <span>UK News</span>
+                        </a>
+                      </li>
+                    </ul>
 
-																																				<li role="presentation">
-																																				<a href="http://news.google.com/?edchanged=1&ned=uk" class="menu-link"
-																																					role="menuitem"> <span>UK News</span> </a> </li>
-																																</ul>
+                  </li>
 
-																																</li>
+                  <li role="presentation">
+                    <a href="http://gmail.google.com/" class="menu-link" role="menuitem">
+                      <span>Google Mail</span>
+                    </a>
+                  </li>
 
-																																<li role="presentation">
-																																<a href="http://gmail.google.com/" class="menu-link" role="menuitem">
-																																<span>Google Mail</span> </a> </li>
+                  <li role="presentation">
+                    <a href="http://groups.google.com/" class="menu-link" role="menuitem">
+                      <span>Google Groups</span>
+                    </a>
+                  </li>
+                </ul>
 
-																																<li role="presentation">
-																																<a href="http://groups.google.com/" class="menu-link" role="menuitem">
-																																<span>Google Groups</span> </a> </li>
-																												</ul>
+              </li>
 
-																												</li>
+              <li role="presentation">
+                <a data-submenu-id="discovery-submenu-id" href="http://news.discovery.com/"
+                  class="menubar-link navigates-away opens-submenu" role="menuitem">
+                  <span>Discovery</span> <span class="menuIcon"></span>
+                </a>
 
-																												<li role="presentation">
-																												<a data-submenu-id="discovery-submenu-id" href="http://news.discovery.com/"
-																													class="menubar-link navigates-away opens-submenu" role="menuitem">
-																												<span>Discovery</span> <span class="menuIcon"></span> </a>
+                <ul id="discovery-submenu-id" class="vertical menu hidden" role="menu">
+                  <li role="presentation">
+                    <a href="http://news.discovery.com/tech" class="menu-link" role="menuitem">
+                      <span>Tech News</span>
+                    </a>
+                  </li>
 
-																												<ul id="discovery-submenu-id" class="vertical menu hidden" role="menu">
-																																<li role="presentation">
-																																<a href="http://news.discovery.com/tech" class="menu-link" role="menuitem">
-																																<span>Tech News</span> </a> </li>
+                  <li role="presentation">
+                    <a href="http://news.discovery.com/space" class="menu-link" role="menuitem">
+                      <span>Space News</span>
+                    </a>
+                  </li>
+                </ul>
 
-																																<li role="presentation">
-																																<a href="http://news.discovery.com/space" class="menu-link" role="menuitem">
-																																<span>Space News</span> </a> </li>
-																												</ul>
+              </li>
 
-																												</li>
+              <li role="presentation">
+                <a data-submenu-id="cbs-submenu-id" href="http://news.cbs.com/"
+                  class="menubar-link navigates-away opens-submenu" role="menuitem">
+                  <span>CBS</span> <span class="menuIcon"></span>
+                </a>
 
-																												<li role="presentation">
-																												<a data-submenu-id="cbs-submenu-id" href="http://news.cbs.com/"
-																													class="menubar-link navigates-away opens-submenu" role="menuitem">
-																												<span>CBS</span> <span class="menuIcon"></span> </a>
+                <ul id="cbs-submenu-id" class="vertical menu hidden" role="menu">
+                  <li role="presentation">
+                    <a href="http://www.cbsnews.com/us/" class="menu-link" role="menuitem">
+                      <span>US News</span>
+                    </a>
+                  </li>
 
-																												<ul id="cbs-submenu-id" class="vertical menu hidden" role="menu">
-																																<li role="presentation">
-																																<a href="http://www.cbsnews.com/us/" class="menu-link" role="menuitem">
-																																<span>US News</span> </a> </li>
+                  <li role="presentation">
+                    <a href="http://www.cbsnews.com/world/" class="menu-link" role="menuitem">
+                      <span>World News</span>
+                    </a>
+                  </li>
 
-																																<li role="presentation">
-																																<a href="http://www.cbsnews.com/world/" class="menu-link" role="menuitem">
-																																<span>World News</span> </a> </li>
+                  <li role="presentation">
+                    <a href="http://www.cbsnews.com/politics/" class="menu-link" role="menuitem">
+                      <span>Political News</span>
+                    </a>
+                  </li>
+                </ul>
 
-																																<li role="presentation">
-																																<a href="http://www.cbsnews.com/politics/" class="menu-link" role="menuitem">
-																																<span>Political News</span> </a> </li>
-																												</ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-																												</li>
-																								</ul>
-																				</div>
-																</div>
-												</div>
-
-												<div role="main">
-																<p>
-																Page body content.
-</p>
-												</div>
-								</div>
-				</body>
+      <div role="main">
+        <p>
+          Page body content.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
