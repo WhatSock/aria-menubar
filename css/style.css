@@ -622,6 +622,16 @@ Tested and confirmed to be accessible using JAWS in IE and Firefox, NVDA in IE a
   content: "\f107";
 }
 
+.menubarWrapper[role="application"] a[href][role="menuitem"] span.menuIcon.right {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.menubarWrapper[role="application"] a[href][role="menuitem"] span.menuIcon.right:before {
+  font-family: FontAwesome;
+  content: "\f054";
+}
+
 .hidden {
   display: none;
 }

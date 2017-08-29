@@ -29,30 +29,52 @@
             <ul id="menubar-id" class="horizontal menubar clearfix" role="menubar">
               <li role="presentation">
 
-                <a data-submenu-id="submenu-id_01" href=""
+                <a data-submenu-id="google-submenu-id" href=""
                   class="menubar-link navigates-away opens-submenu" role="menuitem">
                   <span> Google</span> <span class="menuIcon"></span>
                 </a>
 
-                <ul id="submenu-id_01" class="vertical menu hidden" role="menu">
+                <ul id="google-submenu-id" class="vertical menu hidden" role="menu">
                   <li role="presentation">
-                    <a href="" class="menu-link" role="menuitem">
-                      <span>Google News</span>
+                    <a data-submenu-id="google-news-submenu-id" href="#"
+                      class="menu-link opens-submenu" role="menuitem">
+                      <span>Google News</span> <span class="menuIcon right"></span>
                     </a>
+
+                    <ul id="google-news-submenu-id" class="vertical nested-submenu hidden"
+                      role="menu">
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=us" class="menu-link"
+                          role="menuitem"> <span>US News</span>
+                        </a>
+                      </li>
+
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=au" class="menu-link"
+                          role="menuitem"> <span>Au News</span>
+                        </a>
+                      </li>
+
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=uk" class="menu-link"
+                          role="menuitem"> <span>UK News</span>
+                        </a>
+                      </li>
+                    </ul>
+
                   </li>
 
                   <li role="presentation">
-                    <a href="" class="menu-link" role="menuitem">
+                    <a href="http://gmail.google.com/" class="menu-link" role="menuitem">
                       <span>Google Mail</span>
                     </a>
                   </li>
 
                   <li role="presentation">
-                    <a href="" class="menu-link" role="menuitem">
+                    <a href="http://groups.google.com/" class="menu-link" role="menuitem">
                       <span>Google Groups</span>
                     </a>
                   </li>
-
                 </ul>
 
               </li>
@@ -136,7 +158,6 @@
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.0.js"></script>
-<script src="js/style.js"></script>
 <script src="js/Acc.DC.API.js"></script>
 <script src="js/aria_menubar_module.js"></script>
 <script src="js/aria_menubar-setup.js"></script>
