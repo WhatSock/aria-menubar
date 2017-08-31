@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+
+<title>WhatSock Menubar</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+<link rel="stylesheet" href="css/font-awesome/font-awesome.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="m01">
+    <div id="wrapper"> 
+      <header id="header"> 
+    
+      <div class="innerBanner">          
+    <span class="titleText"><strong>AccDC</strong> Accelerated Dynamic Content</span>
+    <span class="logo"><img alt="WhatSock : Changing the world one step at a time" src="img/whatsock.svg"></span>
+      </div>	
+      </header>
+
+      <div class="innerWrapper">
+      <nav aria-label="Site">
+      <div aria-label="Menubar" class="menubarWrapper" role="application">
+            <ul id="menubar-id" class="horizontal menubar clearfix" role="menubar">
+              <li role="presentation">
+
+                <a data-submenu-id="google-submenu-id" href=""
+                  class="menubar-link navigates-away opens-submenu" role="menuitem">
+                  <span> Google</span> <span class="menuIcon"></span>
+                </a>
+
+                <ul id="google-submenu-id" class="vertical menu hidden" role="menu">
+                  <li role="presentation">
+                    <a data-submenu-id="google-news-submenu-id" href="#"
+                      class="menu-link opens-submenu" role="menuitem">
+                      <span>Google News</span> <span class="menuIcon right"></span>
+                    </a>
+
+                    <ul id="google-news-submenu-id" class="vertical nested-submenu hidden"
+                      role="menu">
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=us" class="menu-link"
+                          role="menuitem"> <span>US News</span>
+                        </a>
+                      </li>
+
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=au" class="menu-link"
+                          role="menuitem"> <span>Au News</span>
+                        </a>
+                      </li>
+
+                      <li role="presentation">
+                        <a href="http://news.google.com/?edchanged=1&ned=uk" class="menu-link"
+                          role="menuitem"> <span>UK News</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </li>
+
+                  <li role="presentation">
+                    <a href="http://gmail.google.com/" class="menu-link" role="menuitem">
+                      <span>Google Mail</span>
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a href="http://groups.google.com/" class="menu-link" role="menuitem">
+                      <span>Google Groups</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </li>
+
+              <li role="presentation">
+                <a data-submenu-id="submenu-id_02" href=""
+                  class="menubar-link navigates-away opens-submenu" role="menuitem">
+                  <span>Discovery</span> <span class="menuIcon"></span>
+                </a>
+
+                <ul id="submenu-id_02" class="vertical menu hidden" role="menu">
+                  <li role="presentation">
+                    <a href="" class="menu-link" role="menuitem">
+                      <span>Tech News</span>
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a href="" class="menu-link" role="menuitem">
+                      <span>Space News</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </li>
+
+              <li role="presentation">
+                <a data-submenu-id="submenu-id_03" href=""
+                  class="menubar-link navigates-away opens-submenu" role="menuitem">
+                  <span>CBS</span> <span class="menuIcon"></span>
+                </a>
+
+                <ul id="submenu-id_03" class="vertical menu hidden" role="menu">
+                  <li role="presentation">
+                    <a href="" class="menu-link" role="menuitem">
+                      <span>AUS News</span>
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a href="" class="menu-link" role="menuitem">
+                      <span>US News</span>
+                    </a>
+                  </li>
+
+                  <li role="presentation">
+                    <a href="" class="menu-link" role="menuitem">
+                      <span>Political News</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            </div>
+            </nav>
+
+          <main id="chapter-content">
+                    <h1>
+                        <span class="chapter__module">AccDc Menubar</span>
+              		</h1>
+                  <p>Menubar styled as a site navigation might look</p>
+                  <p>I have wrapped the role=application in a &lt;nav&gt; element with a aria-label</p>
+                  <code>
+                  &lt;nav aria-label="Site"&gt;
+      &lt;div aria-label="Menubar" class="menubarWrapper" role="application"&gt;
+                  </code>
+          
+          </main>
+          </div>
+        <footer id="footer">
+        
+        <div class="flex-container-row">
+                  <div class="flex-item">
+                     <p>A simulated site menu using the AccDc Menubar API</p>
+                  </div>
+                  <div class="flex-item">
+                      <p>Menu CSS by Laurence Lewis (Decrepidos)</p>
+                  </div>
+                  <div class="flex-item">
+                   <p>&copy; <strong>WhatSock.com</strong></p>
+                  </div> 
+                </div>
+      </footer>
+        
+		</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.js"></script>
+<script src="js/Acc.DC.API.js"></script>
+<script src="js/aria_menubar_module.js"></script>
+<script src="js/aria_menubar-setup.js"></script>
+</body>
+</html>
