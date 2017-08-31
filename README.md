@@ -1,7 +1,11 @@
 # aria-menubar
 A jQuery based ARIA Menubar widget that supports dual functionality for top level Menuitem nodes for external page navigation with strict adherance to the ARIA 1.1 specification.
 
-Demo URL: http://whatsock.com/test/ARIA%20Menubar/menubar.html
+Demos:
+
+Basic with jQuery only: http://whatsock.com/test/ARIA%20Menubar/ARIA%20Menubar/menubar.html
+
+Modified with AccDC by Laurence Lewis: http://whatsock.com/test/ARIA%20Menubar/index.html
 
 [Excerpted from setup.js]
 
