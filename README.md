@@ -60,3 +60,10 @@ It is equally important to make sure that there are no other embedded active ele
 The ARIA Menubar Module should never be applied on a structure that does not open submenus.
 
 */
+
+
+Related projects:
+-----
+
+* WhatSock Organization: https://github.com/whatsock
+* Visual ARIA: https://github.com/accdc/visual-aria
